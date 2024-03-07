@@ -18,9 +18,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
+    height:auto;
     display: flex;
     justify-content: center;
+    color: var(--oxford-blue);
+}
+.app{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
 }
 .card {
     background-color: var(--rich-black);
@@ -30,10 +37,27 @@
     width: 75%;
     max-width: 500px;
     display: flex;
-    justify-content: space-between;
+    gap: 15px;
     align-items: center;
     border-radius: 15px;
     color: var(--platinum);
+}
+.card-one{
+    max-width: 30%;
+    height: auto;
+    max-height: 78%;
+}
+.card-two{
+    max-width: 70%;
+}
+@media (max-width: 800px) {
+    .app{
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+        max-width: 96vw;
+    }
 }
 .header{
     padding: 20px;
@@ -46,8 +70,9 @@
     height: auto;
     border-radius: 5px;
     height: max-content;
+    width: 100%;
 }
-.header-text > h1 {
+h1 {
     color: var(--silver-lake-blue);
     margin-bottom: 5px;
     max-height: 76.8px;
@@ -108,4 +133,174 @@
 }
 a{
     text-decoration: none;
+}
+.project-list{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.carousel{
+    margin-top: 10px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.carousel > a{
+    display: flex;
+    gap: 10px;
+    overflow-x: hidden;
+    padding: 0;
+    width: 100%;
+}
+.carousel-heading{
+    display: flex;
+    gap: 5px;
+}
+.carousel-heading > button {
+    width: 10%;
+    background-color: var(--yinmn-blue);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    
+}
+button:hover{
+    background-color: var(--silver-lake-blue);
+}
+button:active{
+    border: 1px solid var(--platinum);
+}
+.carousel-heading > button:nth-child(2) {
+    margin-left: auto;
+}
+
+.carousel-item{
+    color: var(--platinum) !important;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.carousel-item > img{
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    max-height: 250px;
+    overflow: hidden;
+}
+.carousel-item > h3{
+    padding: 10px;
+    font-size: larger;
+}
+.carousel-item > p{
+    padding: 10px;
+}
+.slide-in-reverse{
+    animation: slideInReverse 0.5s forwards;
+}
+.slide-in {
+    animation: slideIn 0.5s forwards;
+  }
+  
+.slide-out {
+animation: slideOut 0.5s forwards;
+}
+
+.slide-out-reverse {
+animation: slideOutReverse 0.5s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Slide animations */
+.slide-in {
+    animation: slideIn 0.5s forwards;
+  }
+
+  .slide-in-reverse {
+    animation: slideInReverse 0.5s forwards;
+  }
+  
+  .slide-out {
+    animation: slideOut 0.5s forwards;
+  }
+  
+  .slide-out-reverse {
+    animation: slideOutReverse 0.5s forwards;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInReverse {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOut {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes slideOutReverse {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(120%);
+    }
+  }
+  
+  /* Carousel container */
+  .carousel {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-item {
+    flex-shrink: 0;
+    width: 100%;
+  }
+  
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.skill-category > ul > li{
+    margin-left: 20px;
+    padding: 5px;
+    
+}
+.skill-category > ul{
+    display: flex;
+    
 }
